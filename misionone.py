@@ -4,18 +4,12 @@
 #y la salida debe ser el monto cambiado a PYG. 
 #También puedes hacer otro programa que convierta de PYG a USD.
 
-#Solicita tipo de conversión.
-coin = input("Ingrese tipo de conversión USD/PYG o PYG/USD: ")
+price_us = input ("Este programa permite convertir monedas USD/PYG. Ingrese precio del dólar: ") #Solicita costo actual del dólar.
+coinUSD = input("Ingrese la cantidad de dólares que desea convertir: ") #Solicita tipo de conversión.
+print("Usted tiene", float(coinUSD) * float(price_us), "guaraníes.") #Según la conversión especificada transforma los datos ingresados a float y los procesa.
 
-#Solicita costo actual del dólar.
-price_us = input ("Ingrese precio del dólar: ")
-
-#Según la conversión especificada transforma los datos ingresados a float y los procesa.
-if coin == "USD/PYG" or coin == "usd/pyg":
-    amount = input("Ingrese la cantidad de US Dólares: ")
-    convertion = float(amount) * float(price_us)
-    print("Usted tiene", convertion, "guaraníes.")
-elif coin == "PYG/USD" or coin == "pyg/usd":
-    amount = input("Ingrese la cantidad de PY Guaraníes: ")
-    convertion = float(amount) / float(price_us)
-    print("Usted tiene", convertion, "dólares.")
+"""
+price_us = input ("Este programa permite convertir monedas PYG/USD. Ingrese precio del dólar: ")
+coinPYG = input("Ingrese la cantidad de guaraníes que desea convertir: ")
+print("Usted tiene", float(coinPYG) / float(price_us), "dólares.")
+"""
